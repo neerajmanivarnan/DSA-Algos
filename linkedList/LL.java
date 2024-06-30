@@ -6,11 +6,20 @@ public class LL{
 		list.insert(20);
 		list.insert(30);
 		list.insert(40);
+		list.insert(50);
+		list.insert(60);
+		list.insert(70);
+		list.deleteKey(10);
+		list.deleteKey(20);
+		list.deleteKey(30);
+		list.deleteKey(40);
+		list.deleteKey(50);
+		list.deleteKey(60);
+		list.deleteKey(70);
+		list.deleteKey(80);
 		list.display();
-		list.insertFirst(70);
-		list.insertFirst(80);
-		list.insertFirst(90);
-		list.display();
+		
+
     }
 
    
@@ -27,6 +36,64 @@ class LinkedList{
 		this.size = 0;
 		this.head = null;
 		this.tail = null; 
+	}
+
+	public int deleteLast(){
+		int num = tail.val;
+		Node current = head;
+		
+
+		if(this.size == 0){
+			return -1;
+		}
+
+		if(this.size == 1){
+			num = head.val;
+			head = null;
+			tail = head;
+			return num;
+		}
+	
+		while(current.next!=tail){
+			current = current.next;
+		}
+
+		current.next = null;
+		tail = current;
+		this.size-=1;
+		return num;
+	}
+
+	public int deleteKey(int key){
+		Node current = head;
+		int num = -1;		
+		
+		if(head == null){
+			return num;
+			
+		}		
+
+	
+		if(current.val == key){
+			num = current.val;
+			head = head.next;
+			size-=1;
+			return num;
+		}		
+
+
+		while(current!=null){
+			if(current.next.val == key ){
+				num = current.next.val;
+				current.next = current.next.next;
+				break;
+				
+			}
+
+			current = current.next;
+		}
+
+		return num;
 	}
 
 	public void insert(int val){
@@ -79,6 +146,28 @@ class LinkedList{
 		}
 	}
 
+
+	public void insertAfter(int key,int val){
+		if(head == null){
+			//do nothing
+		}else{
+			Node newNode = new Node(val);
+
+			Node current  = head;
+			while(current!=null){
+				if(current.val == key){
+					newNode.next = current.next;
+					current.next = newNode;
+					size+=1;
+					break;
+				}
+
+				current=current.next;
+			}
+
+
+		}
+	}
 	
 
 
