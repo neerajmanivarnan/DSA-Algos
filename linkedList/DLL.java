@@ -6,8 +6,12 @@ public class DLL{
 		list.insertLast(20);
 		list.insertLast(30);
 		list.insertLast(40);
-		list.displayRev();
-    }
+//		list.displayInOrder();
+//		System.out.println("Deleting key");
+//		list.deleteKey(10);    
+		list.displayInOrder();
+
+}
 
    
 }
@@ -24,6 +28,49 @@ class LinkedList{
 		head = null;
 		tail = head;
 	}	
+
+
+	public void insertFirst(int val){
+
+		Node newNode = new Node(val);
+		if(head == null ){
+			head = newNode;
+			tail = head;
+			head.next = null;
+			head.prev = null;
+			this.size+=1;
+			
+		}else{
+			newNode.next = head;
+			head.prev = newNode;	
+			head = head.prev;
+			this.size+=1;
+
+		}
+	}
+	
+	//This code has to be tested for optimisation
+	public void deleteKey(int key){
+
+		if(this.size == 1){
+			head = null;
+		}
+ 
+		if(head == null ){
+			//throw new Exception("List is empty");
+		}else{
+			Node current = head;
+			while(current!=null){
+				if(current.val == key){
+					current.prev.next = current.next;
+					
+				}
+
+				current = current.next;
+			}
+		}
+	}
+
 
 	
 	public void insertLast(int val){
@@ -46,7 +93,7 @@ class LinkedList{
 	public void displayInOrder(){
 		Node current = head;
 		while(current!=null){
-			System.out.println(current.val);
+			System.out.print(current.val + " -> ");
 			current = current.next;
 		}
 	}
@@ -55,7 +102,7 @@ class LinkedList{
 		Node current = tail;
 		
 		while(current!=null){
-			System.out.println(current.val);
+			System.out.println(current.val + " <- ");
 			current = current.prev;
 		}
 	}
