@@ -11,6 +11,10 @@ int minimizedTransition[MAX_STATES][MAX_ALPHABETS];
 int partition[MAX_STATES], newPartition[MAX_STATES];
 int partitionSize, newPartitionSize;
 
+
+
+//--------------------PRINTING DFA---------------------------- 
+
 void printDFA(int trans[MAX_STATES][MAX_ALPHABETS], int numStates) {
     for (int i = 0; i < numStates; i++) {
         for (int j = 0; j < m; j++) {
@@ -18,6 +22,12 @@ void printDFA(int trans[MAX_STATES][MAX_ALPHABETS], int numStates) {
         }
     }
 }
+
+
+
+
+
+//------------------INITILIASING PARTITION ------------------
 
 void initializePartition() {
     for (int i = 0; i < n; i++) {
@@ -30,6 +40,13 @@ void initializePartition() {
     partitionSize = 2; // Two partitions: final and non-final
 }
 
+
+
+
+
+
+
+//------------------ITILIASING PARTITION ------------------
 int areEquivalent(int state1, int state2) {
     for (int i = 0; i < m; i++) {
         int nextState1 = transition[state1][i];
@@ -40,6 +57,12 @@ int areEquivalent(int state1, int state2) {
     }
     return 1;
 }
+
+
+
+
+
+//-------------------MINIMIZING DFA-------------------------
 
 void minimizeDFA() {
     initializePartition();
@@ -73,6 +96,9 @@ void minimizeDFA() {
     } while (changed);
 }
 
+
+//---------------------CONSTRUCTING MINIMIZED DFA--------------------------
+
 void constructMinimizedDFA() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
@@ -81,6 +107,11 @@ void constructMinimizedDFA() {
     }
 }
 
+
+
+
+
+//---------------------MAIN-----------------
 int main() {
     printf("Enter the number of states: ");
     scanf("%d", &n);
