@@ -1,20 +1,8 @@
-import java.util.HashSet;
-
-
 public class LL{
     public static void main(String args[]){
 		LinkedList list = new LinkedList();
 
-		list.insert(10);
-		list.insert(20);
-		list.insert(30);
-		list.insert(40);
-		list.insert(50);
-		list.insert(40);
-		list.insert(20);
-
-		list.removeDuplicates();
-		list.display();
+		
 
     }
 
@@ -22,27 +10,6 @@ public class LL{
 }
 
 class LinkedList{
-
-
-	public void removeDuplicates(){
-		Node current = head;
-		HashSet<Integer> newMap = new HashSet<>();
-		newMap.add(current.val);
-
-
-		while(current.next != null){
-			if(newMap.contains(current.next.val)){
-				current.next = current.next.next;
-				current = current.next;
-			}else{
-				newMap.add(current.next.val);
-				current = current.next;
-			}
-		}
-
-	}
-
-
 
 	private Node head;
 	private Node tail;
