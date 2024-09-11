@@ -8,10 +8,10 @@ process_files() {
         if [ -d "$file" ]; then
             process_files "$file"
         # Check if it's a .java file
-        elif [[ "$file" == *.java ]]; then
+        elif [[ "$file" == *.c ]]; then
             # Remove the .java extension and rename the file
-            mv "$file" "${file%.java}"
-            echo "Renamed: $file -> ${file%.java}"
+            mv "$file" "${file%.c}"
+            echo "Renamed: $file -> ${file%.c}"
         fi
     done
 }
