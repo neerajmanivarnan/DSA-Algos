@@ -1,0 +1,7 @@
+push node
+
+while stack not empty:
+    pop
+    print
+    add the neighbours
+
