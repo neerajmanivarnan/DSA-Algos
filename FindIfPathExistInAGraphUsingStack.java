@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Stack;
 
 class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
@@ -14,29 +16,30 @@ class Solution {
             graph.get(edge[1]).add(edge[0]);
         }
 
-        HashSet<Integer> visited = new HashSet<>();
-        Queue<Integer> q = new LinkedList<>();
+        boolean[] visited = new boolean[n];
+        Stack<Integer> st = new Stack<>();
 
-        
-        q.offer(source);
-        visited.add(source);
+        st.push(source);
+        visited[source] = true;
 
-        while (!q.isEmpty()) {
-            int current = q.poll();
+        while (!st.isEmpty()) {
+            int current = st.pop();
 
             
             if (current == destination) return true;
 
             
             for (int nei : graph.get(current)) {
-                if (!visited.contains(nei)) {
-                    visited.add(nei);
-                    q.offer(nei);
+                if (!visited[nei]) {
+                    visited[nei] = true;
+                    st.push(nei);
                 }
             }
         }
 
         return false; 
     }
+
 }
+
 
