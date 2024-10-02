@@ -1,5 +1,5 @@
 class Solution {
-    public int coinChange(int[] coins, int amount) {
+   public int coinChange(int[] coins, int amount) {
         int[] array = new int[amount + 1];
 
         Arrays.fill(array,amount+1);
