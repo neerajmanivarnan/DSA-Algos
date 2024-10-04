@@ -11,11 +11,10 @@ class Solution {
 
             int currentLevelSize = q.size();
 
-            for(int i=0;i<currentLevelSize;i++){
+            for(){
                 TreeNode currentNode = q.poll();
                 if(i == currentLevelSize-1) result.add(currentNode.val);
                 if(currentNode.left != null) q.offer(currentNode.left);
-                if(currentNode.right != null) q.offer(currentNode.right);
             }
 
         }
