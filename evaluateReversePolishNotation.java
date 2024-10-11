@@ -1,8 +1,8 @@
-import java.util.Stack;
+import java.util.stack;
 
 class Solution {
     public int evalRPN(String[] tokens) {
-        Stack<Integer> stack = new Stack<>();
+        stack<Integer> stack = new stack<>();
         
         for (String token : tokens) {
             
