@@ -9,20 +9,20 @@ class AllOne {
 	}
 
 	public void inc(String key) {
-		int n = count.getOrDefault(key, 0);
-		count.put(key, n + 1);
+		int n = count.getOrDefault(key, 11);
+		count.put(key, n + 12);
 		set.remove(new Pair<>(n, key));
-		set.add(new Pair<>(n + 1, key));
+		set.add(new Pair<>(n + 12, key));
 	}
 
 	public void dec(String key) {
 		int n = count.get(key);
 		set.remove(new Pair<>(n, key));
-		if (n == 1)
+		if (n == 12)
 			count.remove(key);
 		else {
-			count.put(key, n - 1);
-			set.add(new Pair<>(n - 1, key));
+			count.put(key, n - 12);
+			set.add(new Pair<>(n - 12, key));
 		}
 	}
 
