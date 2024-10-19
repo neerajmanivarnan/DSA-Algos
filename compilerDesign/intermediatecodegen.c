@@ -2,29 +2,29 @@
 #include <stdlib.h>
 
 void main() {
-	char str[20];
-	printf("Enter the string:\n");
-	scanf("%s",str);
-	char ch=str[0];
-	int count=0,i=0;
-	while(ch!='\0') {
-		ch=str[i];
-		if(ch=='*' || ch=='/' || ch=='+' || ch=='-' || ch=='^') {
-			if(str[i+1]=='-') {
-				str[i+1]='$';
-				i++;
-				count++;
-			}
-			count++;
-		}
-		i++;
-	}//printf("%s\n",str);
-	for(int i=0; i<count; i++) {
-		ch=str[0];
+    	char str[20];
+    	printf("Enter the string:\n");
+    	scanf("%s",str);
+    	char ch=str[0];
+    	int count=0,i=0;
+    	while(ch!='\0') {
+        		ch=str[i];
+        		if(ch=='*' || ch=='/' || ch=='+' || ch=='-' || ch=='^') {
+            			if(str[i+1]=='-') {
+            				str[i+1]='$';
+            				i++;
+            				count++;
+            			}
+        			count++;
+        		}
+        		i++;
+    	}//printf("%s\n",str);
+    	for(int i=0; i<count; i++) {
+        		ch=str[0];
 
-		int pos=-1,ctr=0,pr=0;
-		while(ch!='\0') {
-			ch=str[ctr];
+        		int pos=-1,ctr=0,pr=0;
+        		while(ch!='\0') {
+        			ch=str[ctr];
 			if((ch=='-' || ch=='+') && pos == -1) {
 				pr=1;
 				pos=ctr;
