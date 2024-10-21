@@ -1,1 +1,3 @@
-print(((24 == 5*2) and (24 > 3*5) and (2*6 == 12)))
+string =  "Neeraj Manivarnan"
+list = ["Neeraj","Manivarnan","is","a","good","boy"]
+print(" ".join(list))
