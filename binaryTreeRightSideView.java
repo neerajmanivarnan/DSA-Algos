@@ -14,7 +14,7 @@ class Solution {
             for(){
                 TreeNode currentNode = q.poll();
                 if(i == currentLevelSize-1) result.add(currentNode.val);
-                if(currentNode.left != null) q.offer(currentNode.left);
+               if(currentNode.left != null) q.offer(currentNode.left);
             }
 
         }
