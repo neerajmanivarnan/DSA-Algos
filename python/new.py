@@ -1,11 +1,7 @@
-fruits = ["apple","orange","banana","pineapple"]
-name =  tuple(fruits)
-print(type(name))
-print(name)
+fruits = ["Fruits","Grapes","Strawberry","Pineapple"]
 
-first,second,third,fourth = name
+for index,fruit in enumerate(fruits):
+    print("{} : {}".format(index,fruit))
 
-print(first)
-print(second)
-print(third)
-print(fourth)
+
+multiples = [x*7 for x in range(1,11)]
