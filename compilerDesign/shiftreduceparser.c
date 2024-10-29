@@ -27,7 +27,9 @@ int main(){
   scanf("%d",&rulescount);
 
 
-  printf("-----Enter the production rules : -----\n"); // LOOP to enter the production rules
+  printf("\n"); // LOOP to enter the production rules
+  printf("\t\t\t-----ENTER THE PRODUCTION RULES: -----\n"); // LOOP to enter the production rules
+  printf("\n"); // LOOP to enter the production rules
   for(int i=0;i<rulescount;i++){
 
     printf("Enter the production number %d : ",i+1);
