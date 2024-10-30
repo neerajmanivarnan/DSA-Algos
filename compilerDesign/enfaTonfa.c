@@ -96,7 +96,7 @@ void convertNFA(NFA *nfa, NFA *nfa_no_epsilon) {
     // Update transitions for NFA without epsilon transitions
     for (int i = 0; i < nfa->numStates; i++) {
         for (int j = 0; j < nfa->numSymbols; j++) {
-            int nextState = nfa.transitions[i][j];
+            int nextState = nfa->transitions[i][j];
             if (nextState != -1) {
                 for (int k = 0; k < nfa->numStates; k++) {
                     if (epsilonClosure[nextState][k]) {

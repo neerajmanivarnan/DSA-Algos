@@ -2,22 +2,22 @@
 
 void efsilonClosure(int start, int transitionDiagram[10][10], int numberOfStates, int visited[]){
 
-	for(int i = 0 ; i < numberOfStates ; i++){
+  	for(int i = 0 ; i < numberOfStates ; i++){
 	
-		if(transitionDiagram[start][i] == 0){
+	    	if(transitionDiagram[start][i] == 0){
 		
-			if(visited[i]){
+		      	if(visited[i]){
 			
-				return ;
+		      		return ;
 			
-			}
-			visited[i] = 1 ;
-			printf("q%d ", i) ;
-			efsilonClosure(i, transitionDiagram, numberOfStates, visited) ;
+			      }
+			      visited[i] = 1 ;
+			      printf("q%d ", i) ;
+			      efsilonClosure(i, transitionDiagram, numberOfStates, visited) ;
 		
-		}
+		    }
 	
-	}
+	  }
 
 }
 
