@@ -1,7 +1,7 @@
-fruits = ["Fruits","Grapes","Strawberry","Pineapple"]
+import subprocess
+import secrets
+import csv
+from pathlib import Path
 
-for index,fruit in enumerate(fruits):
-    print("{} : {}".format(index,fruit))
-
-
-multiples = [x*7 for x in range(1,11)]
+cwd = Path.cwd()
+print(cwd)
