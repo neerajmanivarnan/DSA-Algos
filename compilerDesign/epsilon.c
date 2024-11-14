@@ -24,6 +24,7 @@ void main() {
     printf("Enter number of states :- ");
     scanf("%d", & numberOfStates);
     printf("0 is efsilon\n1 is some/no transition\n");
+
     for (int i = 0; i < numberOfStates; i++) {
 
         for (int j = 0; j < numberOfStates; j++) {
@@ -42,11 +43,11 @@ void main() {
         };
         printf("Epsilon closure of q%d is :- ", i);
         efsilonClosure(i, transitionDiagram, numberOfStates, visited);
+
         if (!visited[i]) {
-
             printf("q%d", i);
-
         }
+
         printf("\n");
 
     }
