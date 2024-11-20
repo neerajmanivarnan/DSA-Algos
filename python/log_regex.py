@@ -6,7 +6,6 @@ regex_pattern = r"\[(\d+)\]"
 
 i = 0
 
-def extract_pid
 
 with open("file.txt","r") as file:
 
