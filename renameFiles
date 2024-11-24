@@ -1,22 +1,16 @@
 #!/bin/bash
 
-# Function to process each .java file
 process_files() {
-    # Loop through all files in the current directory
     for file in "$1"/*; do
-        # Check if it's a directory, then recursively call the function
         if [ -d "$file" ]; then
             process_files "$file"
-        # Check if it's a .java file
         elif [[ "$file" == *.c ]]; then
-            # Remove the .java extension and rename the file
             mv "$file" "${file%.c}"
             echo "Renamed: $file -> ${file%.c}"
         fi
     done
 }
 
-# Call the function with the current directory or a provided path
 directory=${1:-.}
 process_files "$directory"
 
