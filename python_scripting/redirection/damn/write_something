@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in *.HTM;do 
+  echo "This is $file and should be renamed to $file.html" > $file
+done
