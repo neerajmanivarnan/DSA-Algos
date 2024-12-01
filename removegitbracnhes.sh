@@ -8,4 +8,3 @@ while read line ; do
 		echo "Branch $line deleted"
 	fi
 done < "$1"
-
