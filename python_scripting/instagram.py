@@ -33,7 +33,7 @@ username = input("Enter username")
 password = getpass.getpass("Enter your password")
 
 if login_with_2fa(username, password):
-    # Load the profile of the logged-in user
+   # Load the profile of the logged-in user
     profile = instaloader.Profile.from_username(L.context, username)
 
     # Get followers and followees (the people you follow)

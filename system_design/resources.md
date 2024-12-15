@@ -1,45 +1,30 @@
+# System Design Resources
 
+- [Idempotent API](https://lnkd.in/erMkqwq4)
 
+- [Microservices Lessons From Netflix](https://lnkd.in/eZSM3CRB)
 
-1. Idempotent API:
-↳ https://lnkd.in/erMkqwq4
+- [Redis Use Cases](https://lnkd.in/ekJMjMG3)
 
-2. Microservices Lessons From Netflix:
-↳ https://lnkd.in/eZSM3CRB
+- [Actor Model](https://lnkd.in/eqcb7MpP)
 
-3. Redis Use Cases:
-↳ https://lnkd.in/ekJMjMG3
+- [Protocol Buffers vs JSON](https://lnkd.in/egcFxe2t
+)
+- [Consistent Hashing](https://lnkd.in/eUP9DbCg)
 
-4. Actor Model:
-↳ https://lnkd.in/eqcb7MpP
+- [Monolith vs Microservices](https://lnkd.in/eUP9DbCg)
 
-5. Protocol Buffers vs JSON:
-↳ https://lnkd.in/egcFxe2t
+- [Caching Patterns](https://lnkd.in/eUP9DbCg)
 
-6. Consistent Hashing:
-↳ https://lnkd.in/eUP9DbCg
+- [Service Discovery](https://lnkd.in/eUP9DbCg)
 
-7. Monolith vs Microservices:
-↳ https://lnkd.in/e3EBtg_v
+- [What Happens When You Type a URL Into Your Browser?](https://lnkd.in/eUP9DbCg)
 
-8. Caching Patterns:
-↳ https://lnkd.in/gJ8kWMxZ
+- [How Databases Keep Passwords Securely](https://lnkd.in/eUP9DbCg)
 
-9. Service Discovery:
-↳ https://lnkd.in/eCYYwQfU
+- [Chaos Engineering](https://lnkd.in/eUP9DbCg)
 
-10. What Happens When You Type a URL Into Your Browser?:
-↳ https://lnkd.in/eusuDn5z
+- [Saga Design Pattern](https://lnkd.in/eUP9DbCg)
 
-11. How Databases Keep Passwords Securely:
-↳ https://lnkd.in/edd8-N5k
-
-12. Chaos Engineering:
-↳ https://lnkd.in/egT6feTR
-
-13. Saga Design Pattern:
-↳ https://lnkd.in/eFXC4-aJ
-
-14. How to Scale an App to 100 Million Users:
-↳ https://lnkd.in/e4Mqty4X
+- [How to Scale an App to 100 Million Users](https://lnkd.in/eUP9DbCg)
 
