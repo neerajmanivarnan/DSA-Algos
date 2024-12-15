@@ -10,24 +10,19 @@ def two_sum(input_list,x):
         dic[input_list[i]] = i
 
 
+first = input()
 
-first_io = input()
-first_io_array = first_io.split(' ') 
+first_io_array = first.split()
+length = first_io_array[0]
+sum = first_io_array[1]
 
-n = first_io_array[0]
-x = first_io_array[1]
+second = input()
+arr = second.split()
 
-input_array = input()
+result_array = two_sum(arr,sum)
 
-input_list = input_array.split(' ')
+if result_array:
+    print(result_array)
+else:
+    print("IMPOSSIBLE")
 
-for num in input_list:
-    num = int(num)
-
-new_list = (two_sum(input_list,x))
-
-for num in new_list:
-    num += 1
-
-
-string_return = ' '.join(new_list)
