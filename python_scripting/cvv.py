@@ -1,5 +1,5 @@
 import cv2
-
+                        
 capture = cv2.VideoCapture(0)
 
 while True:
