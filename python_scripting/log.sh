@@ -2,9 +2,9 @@
 
 file="log.csv"
 declare -A dict
+			
 
-
-while read -r line; do 
+wread -r line; do 
 
   ip=$(grep -Eo "^([[:alnum:]_.]+)[[:space:]]" $line)
   if [[ ! -v dict["$ip"] ]];then
